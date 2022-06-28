@@ -1,3 +1,58 @@
 Link para download do git: https://git-scm.com/
+Link para comandos git: https://comandosgit.github.io/
+
 O Git Bash é um terminal extendido para otimizar o uso do git
+
+comandos GIT e o que fazem:
+
+git init: inicializa um repositório local git
+git status: verifica o estado dos seus arquivos
+git add <nomeDoArquivo>: envia seu arquivo especificado para o Stage
+git add - -all: envia todos os arquivos para o Stage
+git commit -m “tituloDoCommit: envia o que está no Stage para o HEAD
+git remote add origin urlDoRepositorio: adiciona e indica a URL do repositório remoto em que os arquivos serão mantidos
+git push origin master: envia os arquivos para o repositório remoto que você especificou através da URL do comando acima
+git checkout -b <nomeDaBranch>: cria uma nova branch
+git checkout <nomeDaBranch>: alterna para a branch especificada
+Fluxo :
+
+De forma resumida, o Git abrange 3 camadas. O chamado “Working Directory”, que é onde você está codificando seu projeto, o “Index”, também chamado de “Stage”, que é uma camada onde você adiciona suas modificações de forma não permanente, ou seja, nesta camada você pode resetar as alterações que você incluiu no Stage/Index ou então partir para a próxima camada, a chamada de “HEAD”, quando você confirma suas alterações fazendo um “commit”. Porém essa ultima camada ainda não é o seu repositório remoto para o qual você deseja incrementar suas modificações. Para que o seu código chegue até o repositório remoto é necessario um comando muito simples chamado git push:
+
+Git Bash :
+
+Todo esse fluxo descrito acima é manipulado através do Git Bash (caso seja Windows). Contextualizando, o Git foi feito inicialmente para rodar em sistemas Unix, que não é o caso do Windows. Assim , foi criado o Git Bash, uma aplicação que emula um terminal Unix e permite que você desfrute dos comandos Git. O Git Bash já vem no pacote de instalação do Git para Windows.
+
+Comandos Git / Instalação
+
+## Windows 
+https://msysgit.github.com
+Após concluir a instalação, você terá tanto uma versão command line (linha de comando, incluindo um cliente SSH que será útil depois) e uma GUI padrão.
+
+## git config
+
+A primeira coisa que você deve fazer quando instalar o Git é definir o seu nome de usuário e endereço de e-mail. Isso é importante porque todos os commits no Git utilizam essas informações, e está imutavelmente anexado nos commits que você realiza:
+
+git config --global user.name "wfm.dev"
+git config --global user.email wfm.dev@example.com
+
+Inicializando um Repositório em um Diretório Existente
+Caso você esteja iniciando o monitoramento de um projeto existente com Git, você precisa ir para o diretório do projeto e digitar
+
+# git init
+
+## git clone
+
+clona um repositório com git clone [url]. Por exemplo, caso você queria clonar a biblioteca Git do Ruby chamada Grit, você pode fazê-lo da seguinte forma:
+
+git clone git://github.com/schacon/grit.git
+
+Básico
+
+Quando um repositório é inicialmente clonado, todos os seus arquivos estarão monitorados e inalterados porque você simplesmente os obteve e ainda não os editou. Conforme você edita esses arquivos, o Git passa a vê-los como modificados, porque você os alterou desde seu último commit. Você seleciona esses arquivos modificados e então faz o commit de todas as alterações selecionadas e o ciclo se repete.
+
+Monitorando Novos Arquivos
+Para passar a monitorar um novo arquivo, use o comando git add. Para monitorar o arquivo README, você pode rodar isso:
+
+git add README
+
 
